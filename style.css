@@ -1,0 +1,732 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #24243e;
+    background: #ffffff;
+}
+
+/* Navbar */
+
+header {
+    width: 100%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span,
+footer span {
+    color: #7657e8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7657e8;
+}
+
+.nav-btn,
+.primary-btn {
+    background: #7657e8;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background: #5d40cb;
+}
+
+.menu-toggle,
+.mobile-cta {
+    display: none;
+}
+
+/* Hero Section */
+
+.hero {
+    max-width: 1250px;
+    margin: auto;
+    padding: 100px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: #faf9ff;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tag,
+.section-heading span {
+    color: #7657e8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #7657e8;
+    display: block;
+}
+
+.hero-content > p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 17px;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.secondary-btn {
+    padding: 13px 23px;
+    border: 1px solid #7657e8;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #7657e8;
+    display: inline-block;
+}
+
+.hero-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    color: #555;
+    font-size: 13px;
+}
+
+/* Dashboard */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(80,60,150,0.12);
+}
+
+.dashboard h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.dashboard > p {
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.task-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 17px;
+    margin-bottom: 12px;
+    background: #faf9ff;
+    border-radius: 10px;
+}
+
+.task-card > span {
+    color: #7657e8;
+    font-size: 23px;
+}
+
+.task-card strong,
+.task-card small {
+    display: block;
+}
+
+.task-card small {
+    color: #888;
+    margin-top: 5px;
+}
+
+.progress {
+    margin-top: 25px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: #e9e4fa;
+    height: 9px;
+    border-radius: 10px;
+}
+
+.progress-bar div {
+    background: #7657e8;
+    height: 100%;
+    width: 75%;
+    border-radius: 10px;
+}
+
+/* Common Sections */
+
+.features,
+.about,
+.pricing,
+.contact {
+    padding: 90px 30px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* Features */
+
+.feature-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 35px 25px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* About */
+
+.about {
+    background: #faf9ff;
+}
+
+.steps {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step {
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+}
+
+.step h3 {
+    color: #7657e8;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.step h4 {
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Pricing */
+
+.pricing-container {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.price-card {
+    border: 1px solid #eee;
+    padding: 35px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.price-card h2 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.price-card h2 small {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.price-card > p {
+    color: #777;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 25px 0;
+    line-height: 2.5;
+}
+
+.popular {
+    border: 2px solid #7657e8;
+}
+
+.popular-tag {
+    background: #7657e8;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+/* Contact */
+
+.contact {
+    background: #faf9ff;
+}
+
+#contactForm {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+#contactForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: fit-content;
+}
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #24243e;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #ccc;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 850px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content > p {
+        margin: auto;
+    }
+
+    .hero-buttons,
+    .hero-info {
+        justify-content: center;
+    }
+
+    .feature-container,
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 18px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    /* Hamburger Button */
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #24243e;
+        cursor: pointer;
+    }
+
+    /* Mobile Navigation */
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-cta {
+        display: block;
+        background: #7657e8;
+        padding: 12px 25px;
+        border-radius: 8px;
+    }
+
+    .mobile-cta a {
+        color: white;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    /* Other Sections */
+
+    .features,
+    .about,
+    .pricing,
+    .contact {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .feature-container,
+    .steps,
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        padding: 22px;
+    }
+
+}
+/* =========================
+   TASK MANAGEMENT SECTION
+========================= */
+
+.task-manager {
+    padding: 90px 30px;
+    background: #ffffff;
+}
+
+.task-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: #faf9ff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Task Input */
+
+.task-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.task-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.task-input input:focus {
+    border-color: #7657e8;
+}
+
+/* Filters */
+
+.task-filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border: 1px solid #7657e8;
+    border-radius: 7px;
+    background: white;
+    color: #7657e8;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #7657e8;
+    color: white;
+}
+
+/* Task Statistics */
+
+.task-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.task-stats > div {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.task-stats h3 {
+    color: #7657e8;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.task-stats p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Task List */
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 17px;
+    border-radius: 9px;
+    margin-bottom: 12px;
+    border: 1px solid #eee;
+}
+
+.task-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-wrap: anywhere;
+}
+
+.task-details input {
+    width: 17px;
+    height: 17px;
+    accent-color: #7657e8;
+    cursor: pointer;
+}
+
+.task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn {
+    background: #ffe8e8;
+    color: #e04444;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.empty-message {
+    text-align: center;
+    color: #888;
+    padding: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .task-manager {
+        padding: 60px 20px;
+    }
+
+    .task-container {
+        padding: 18px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    .task-stats {
+        gap: 8px;
+    }
+
+    .task-stats > div {
+        padding: 13px 5px;
+    }
+
+    .task-stats h3 {
+        font-size: 22px;
+    }
+
+    .task-stats p {
+        font-size: 12px;
+    }
+
+}

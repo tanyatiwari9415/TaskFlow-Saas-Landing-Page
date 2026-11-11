@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Smart Task Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                TaskFlow<span>.</span>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#features">Features</a></li>
+
+                <li><a href="#about">How It Works</a></li>
+
+                <li><a href="#pricing">Pricing</a></li>
+
+                <li><a href="#tasks">Tasks</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+                <!-- Mobile Get Started Button -->
+                <li class="mobile-cta">
+                    <a href="#contact">Get Started</a>
+                </li>
+
+            </ul>
+
+            <!-- Desktop Button -->
+            <a href="#contact" class="nav-btn">
+                Get Started
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                SMARTER WORK. BETTER RESULTS.
+            </span>
+
+            <h1>
+                Manage Your Work
+                <span>Smarter & Faster</span>
+            </h1>
+
+            <p>
+                TaskFlow helps you organize tasks, manage projects
+                and improve productivity — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#pricing" class="primary-btn">
+                    Get Started
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    Explore Features
+                </a>
+
+            </div>
+
+            <div class="hero-info">
+
+                <span>✓ Easy to use</span>
+
+                <span>✓ Save your time</span>
+
+                <span>✓ Work smarter</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard -->
+        <div class="hero-image">
+
+            <div class="dashboard">
+
+                <h3>My Dashboard</h3>
+
+                <p>Your productivity overview</p>
+
+                <div class="task-card">
+
+                    <span>✓</span>
+
+                    <div>
+                        <strong>Website Design</strong>
+                        <small>Completed</small>
+                    </div>
+
+                </div>
+
+                <div class="task-card">
+
+                    <span>○</span>
+
+                    <div>
+                        <strong>Project Planning</strong>
+                        <small>In Progress</small>
+                    </div>
+
+                </div>
+
+                <div class="task-card">
+
+                    <span>○</span>
+
+                    <div>
+                        <strong>Team Meeting</strong>
+                        <small>Upcoming</small>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+
+                    <div class="progress-text">
+
+                        <span>Weekly Progress</span>
+
+                        <strong>75%</strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+                        <div></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <div class="section-heading">
+
+            <span>OUR FEATURES</span>
+
+            <h2>Everything You Need to Stay Productive</h2>
+
+            <p>
+                Simple tools to help you get more work done.
+            </p>
+
+        </div>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📋</div>
+
+                <h3>Task Management</h3>
+
+                <p>
+                    Organize your daily tasks and manage your work easily.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📊</div>
+
+                <h3>Track Progress</h3>
+
+                <p>
+                    Monitor your progress and achieve your goals faster.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">👥</div>
+
+                <h3>Team Collaboration</h3>
+
+                <p>
+                    Work together with your team and manage projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Task Management Section -->
+<section class="task-manager" id="tasks">
+
+    <div class="section-heading">
+        <span>MY WORKSPACE</span>
+        <h2>Manage Your Tasks</h2>
+        <p>Organize your work and stay productive.</p>
+    </div>
+
+    <div class="task-container">
+
+        <div class="task-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <button id="addTaskBtn" class="primary-btn">
+                + Add Task
+            </button>
+        </div>
+
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">
+                All Tasks
+            </button>
+
+            <button class="filter-btn" data-filter="pending">
+                Pending
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+        </div>
+
+        <div class="task-stats">
+            <div>
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div>
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div>
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div id="taskList">
+            <p class="empty-message">No tasks added yet.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <div class="section-heading">
+
+            <span>HOW IT WORKS</span>
+
+            <h2>Get Started in Three Simple Steps</h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <h3>01</h3>
+
+                <h4>Create Your Workspace</h4>
+
+                <p>
+                    Start by setting up your workspace.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <h3>02</h3>
+
+                <h4>Add Your Tasks</h4>
+
+                <p>
+                    Organize your tasks and projects.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <h3>03</h3>
+
+                <h4>Track Your Progress</h4>
+
+                <p>
+                    Complete tasks and reach your goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+
+        <div class="section-heading">
+
+            <span>OUR PRICING</span>
+
+            <h2>Simple Plans for Everyone</h2>
+
+        </div>
+
+
+        <div class="pricing-container">
+
+            <div class="price-card">
+
+                <h3>Free Plan</h3>
+
+                <h2>₹0 <small>/ month</small></h2>
+
+                <p>Perfect for getting started.</p>
+
+                <ul>
+
+                    <li>✓ Basic Task Management</li>
+
+                    <li>✓ Personal Workspace</li>
+
+                    <li>✓ Progress Tracking</li>
+
+                </ul>
+
+                <a href="#contact" class="secondary-btn">
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <div class="price-card popular">
+
+                <span class="popular-tag">POPULAR</span>
+
+                <h3>Pro Plan</h3>
+
+                <h2>₹499 <small>/ month</small></h2>
+
+                <p>For professionals and teams.</p>
+
+                <ul>
+
+                    <li>✓ All Free Features</li>
+
+                    <li>✓ Team Collaboration</li>
+
+                    <li>✓ Advanced Analytics</li>
+
+                </ul>
+
+                <a href="#contact" class="primary-btn">
+                    Choose Pro
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <span>CONTACT US</span>
+
+            <h2>Ready to Work Smarter?</h2>
+
+            <p>
+                Send us a message and get started with TaskFlow.
+            </p>
+
+        </div>
+
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit" class="primary-btn">
+                Send Message
+            </button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>TaskFlow<span>.</span></h3>
+
+        <p>
+            Making work simple, organized and productive.
+        </p>
+
+        <p>
+            © 2026 TaskFlow. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
